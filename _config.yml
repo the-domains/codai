@@ -1,16 +1,16 @@
-typography_spectrum: 0.672265105182305
+layout_spectrum: 0.8824408026515405
+typography_spectrum: 1
 color:
-  brandStrength: 0.9809348753187805
-  lightness: 0.2899920742493123
-  saturation: 0.5737023514229804
-  rhythmicContrast: 0.8899055267684162
+  brandStrength: 0.9872703875605902
+  lightness: 0.28163522199266544
+  saturation: 0.5712834880611684
+  rhythmicContrast: 0.8878306104895649
   brandColors:
     - '#9D2D3C'
     - '#DDE4DD'
     - '#BCAB47'
     - '#6B574B'
     - '#160600'
-layout_spectrum: 0.7153014703653753
 name: codai
 url: 'http://cod.ai/'
 navigation:
