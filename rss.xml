@@ -4,9 +4,9 @@
         <description><![CDATA[cod.ai]]></description>
         <link>http://cod.ai/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Thu, 09 Mar 2017 14:02:53 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Mar 2017 16:15:55 GMT</lastBuildDate>
         <atom:link href="http://cod.ai/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 09 Mar 2017 14:02:50 GMT</pubDate>
+        <pubDate>Thu, 09 Mar 2017 16:15:54 GMT</pubDate>
         <item>
             <title><![CDATA[The Grid’s Eyes]]></title>
             <description><![CDATA[<p>We apply algorithms and techniques from the Computer Vision field. Combined with hand picked datasets we can create <em>extractors</em> for features we are interested in. With that our AI can answer questions like <em>"what is a good color palette from this image?"</em>, <em>"where is the best place to crop that picture?"</em> or <em>"can we place text on top of this image? and where?"</em>.</p>,<h1>The Grid’s Eyes</h1>,<img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/b2ed61a18de752ff2baddf11e22e94951a444f58.jpg">]]></description>
@@ -57,6 +57,13 @@ python convolutional.py</code></pre>]]></description>
             <link>http://cod.ai/installing-nvidia-drivers-cuda-80-and-cudnn-51-for-gtx-10/index.html</link>
             <guid isPermaLink="false">01d32a36-eba7-4efe-9482-80b6eba9a501</guid>
             <pubDate>Thu, 09 Mar 2017 03:06:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[IMPROVISATIONAL INTERFACES]]></title>
+            <description><![CDATA[<article><h1>IMPROVISATIONAL INTERFACES</h1><p>As technology plays an ever-increasing role in our lives, the qualities of our myriad relationships with technology become ever more important. The computational revolution in particular gives cause to re-evaluate the venerable perspective of technologies as tools.</p><img src="http://improvinterfaces.org/wp-content/uploads/2017/02/ARC_inline.jpg"></article>]]></description>
+            <link>http://improvinterfaces.org/</link>
+            <guid isPermaLink="false">70d15889-0feb-4e1d-b5c3-2cd25c8c7fec</guid>
+            <pubDate>Thu, 09 Mar 2017 16:15:54 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
