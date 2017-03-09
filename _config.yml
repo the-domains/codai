@@ -1,0 +1,49 @@
+typography_spectrum: 0.672265105182305
+color:
+  brandStrength: 0.9809348753187805
+  lightness: 0.2899920742493123
+  saturation: 0.5737023514229804
+  rhythmicContrast: 0.8899055267684162
+  brandColors:
+    - '#9D2D3C'
+    - '#DDE4DD'
+    - '#BCAB47'
+    - '#6B574B'
+    - '#160600'
+layout_spectrum: 0.7153014703653753
+name: codai
+url: 'http://cod.ai/'
+navigation:
+  - name: About us
+    id: 4d5a1426-1dd3-45d3-89c5-b0fdff217c2c
+    type: content
+content:
+  - id: !<tag:yaml.org,2002:js/undefined> ''
+    type: image
+    html: >-
+      <img
+      src="https://the-grid-user-content.s3-us-west-2.amazonaws.com/37571d72-d743-45dd-8966-8c2f7153f798.png">
+    src: >-
+      https://the-grid-user-content.s3-us-west-2.amazonaws.com/37571d72-d743-45dd-8966-8c2f7153f798.png
+    metadata:
+      author: []
+      related: []
+      publisher:
+        url: 'https://the-grid-user-content.s3-us-west-2.amazonaws.com'
+        name: The-grid-user-content
+        favicon: null
+        domain: the-grid-user-content.s3-us-west-2.amazonaws.com
+      keywords: []
+      description: ''
+      app_links: []
+      '@context': 'http://schema.org'
+      '@type': MediaObject
+      datePublished: null
+    title: !<tag:yaml.org,2002:js/undefined> ''
+    caption: !<tag:yaml.org,2002:js/undefined> ''
+    text: !<tag:yaml.org,2002:js/undefined> ''
+title: cod.ai
+description: we create algorithms that create
+github: true
+logo: >-
+  https://the-grid-user-content.s3-us-west-2.amazonaws.com/727186d3-76f4-4b3e-a622-90015a608c83.png
