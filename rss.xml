@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[cod.ai]]></title>
+        <description><![CDATA[cod.ai]]></description>
+        <link>http://cod.ai/</link>
+        <generator>The Grid</generator>
+        <lastBuildDate>Thu, 09 Mar 2017 03:06:10 GMT</lastBuildDate>
+        <atom:link href="http://cod.ai/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Thu, 09 Mar 2017 03:06:09 GMT</pubDate>
+        <item>
+            <title><![CDATA[The Grid’s Eyes]]></title>
+            <description><![CDATA[<p>We apply algorithms and techniques from the Computer Vision field. Combined with hand picked datasets we can create <em>extractors</em> for features we are interested in. With that our AI can answer questions like <em>"what is a good color palette from this image?"</em>, <em>"where is the best place to crop that picture?"</em> or <em>"can we place text on top of this image? and where?"</em>.</p>,<h1>The Grid’s Eyes</h1>,<img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/b2ed61a18de752ff2baddf11e22e94951a444f58.jpg">]]></description>
+            <link>http://cod.ai/the-grids-eyes/index.html</link>
+            <guid isPermaLink="false">4bd3cfb6-d280-4796-abe9-f83a6056f6b1</guid>
+            <pubDate>Thu, 09 Mar 2017 03:06:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[<p>We apply Artificial Intelligence to augment and democratize creativity.</p>,<p>We're a couple of software engineers and artists. Our company is our home so we breath code all the day long. We are continuously improving our products day and night.</p>]]></description>
+            <link>http://cod.ai/we-apply-artificial-intelligence-to-augment-and-democratize/index.html</link>
+            <guid isPermaLink="false">4d5a1426-1dd3-45d3-89c5-b0fdff217c2c</guid>
+            <pubDate>Wed, 08 Mar 2017 23:47:27 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
