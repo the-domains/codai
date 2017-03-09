@@ -4,15 +4,59 @@
         <description><![CDATA[cod.ai]]></description>
         <link>http://cod.ai/</link>
         <generator>The Grid</generator>
-        <lastBuildDate>Thu, 09 Mar 2017 03:06:10 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 09 Mar 2017 03:06:28 GMT</lastBuildDate>
         <atom:link href="http://cod.ai/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 09 Mar 2017 03:06:09 GMT</pubDate>
+        <pubDate>Thu, 09 Mar 2017 03:06:26 GMT</pubDate>
         <item>
             <title><![CDATA[The Grid’s Eyes]]></title>
             <description><![CDATA[<p>We apply algorithms and techniques from the Computer Vision field. Combined with hand picked datasets we can create <em>extractors</em> for features we are interested in. With that our AI can answer questions like <em>"what is a good color palette from this image?"</em>, <em>"where is the best place to crop that picture?"</em> or <em>"can we place text on top of this image? and where?"</em>.</p>,<h1>The Grid’s Eyes</h1>,<img src="https://s3-us-west-2.amazonaws.com/the-grid-img/p/b2ed61a18de752ff2baddf11e22e94951a444f58.jpg">]]></description>
             <link>http://cod.ai/the-grids-eyes/index.html</link>
             <guid isPermaLink="false">4bd3cfb6-d280-4796-abe9-f83a6056f6b1</guid>
             <pubDate>Thu, 09 Mar 2017 03:06:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Installing Nvidia drivers, CUDA 8.0 and cuDNN 5.1 for GTX-1060 on Ubuntu 16.04]]></title>
+            <description><![CDATA[<h1>Installing Nvidia drivers, CUDA 8.0 and cuDNN 5.1 for GTX-1060 on Ubuntu 16.04</h1>,<h2>Install Nvidia drives and CUDA 8.0</h2>,<pre><code>wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
+
+sudo dpkg -i cuda-repo-ubuntu1604_8.0.44-1_amd64.deb
+
+sudo apt-get update sudo apt-get install cuda</code></pre>,<p>Restart the computer. Screen should has the right resolution now, Nvidia drivers should be installed in <em>/usr/local/cuda</em>.</p>,<p>Edit your <em>~/.bashrc</em> and source it:</p>,<pre><code>export PATH=/usr/local/cuda-8.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}</code></pre>,<h2>Install cuDNN</h2>,<p>First signup or login into Nvidia developer program and download it: <a href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a></p>,<p>You should download the following package:</p>,<p><em>Download cuDNN v5.1 (August 10, 2016), for CUDA 8.0 cuDNN v5.1 Library for Linux</em></p>,<p>Uncompress and copy cuDNN to CUDA directory:</p>,<pre><code>tar xvzf cudnn-8.0-linux-x64-v5.1.tgz
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*</code></pre>,<p> Now you can already check if CUDA/cuDNN are properly installed:</p>,<pre><code>nvidia-smi
+
+    Sat Oct 15 22:46:05 2016 
+    +-----------------------------------------------------------------------------+
+    | NVIDIA-SMI 367.48 Driver Version: 367.48                                    | 
+    |-------------------------------+----------------------+----------------------+ 
+    | GPU Name Persistence-M        | Bus-Id Disp.A        | Volatile Uncorr. ECC | 
+    | Fan Temp Perf Pwr:Usage/Cap   | Memory-Usage         | GPU-Util Compute M.  | 
+    |===============================+======================+======================| 
+    | 0 GeForce GTX 106... Off      | 0000:01:00.0 On      | N/A                  |
+    | 0% 35C P8 9W / 120W           | 324MiB / 6071MiB     | 1% Default           | 
+    +-------------------------------+----------------------+----------------------+ 
+    +-----------------------------------------------------------------------------+ 
+    | Processes: GPU Memory              | | GPU PID Type Process name Usage      | 
+    |=============================================================================| 
+    | 0 2802 G /usr/lib/xorg/Xorg 167MiB | | 0 3497 G compiz 155MiB               | 
+    +-----------------------------------------------------------------------------+</code></pre>,<p>Check if building CUDA samples works:</p>,<pre><code>cd /usr/local/cuda/samples/5_Simulations/oceanFFT/
+make
+./oceanFFT</code></pre>,<h2>Install TensorFlow</h2>,<p>TensorFlow binaries do not support CUDA 8.0 neither cuDNN 5.1 so we have to build it from source. We're going to build TF as a PIP wheel, so we need PIP installed:</p>,<pre><code>sudo apt-get install python-pip python-dev</code></pre>,<p> Then setup the builder, Bazel, this guy will build the PIP wheel:</p>,<pre><code>sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+echo &quot;deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8&quot; | sudo tee /etc/apt/sources.list.d/bazel.list
+curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install bazel
+sudo apt-get upgrade bazel</code></pre>,<p>Install other dependencies:</p>,<pre><code>sudo apt-get install python-numpy swig python-dev python-wheel</code></pre>,<p>Clone TF and configure it:</p>,<pre><code>git clone https://github.com/tensorflow/tensorflow
+cd tensorflow
+./configure # Defaults generally work</code></pre>,<p>Use Bazel to create the PIP package and install it (with GPU support):</p>,<pre><code>bazel build -c opt --config=cuda //tensorflow/tools/pip_package:build_pip_package bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+sudo pip install /tmp/tensorflow_pkg/tensorflow-0.11.0rc0-py2-none-any.whl</code></pre>,<p>And that's it! Check if your build is working:</p>,<pre><code>cd tensorflow/models/image/mnist
+python convolutional.py</code></pre>]]></description>
+            <link>http://cod.ai/installing-nvidia-drivers-cuda-80-and-cudnn-51-for-gtx-10/index.html</link>
+            <guid isPermaLink="false">01d32a36-eba7-4efe-9482-80b6eba9a501</guid>
+            <pubDate>Thu, 09 Mar 2017 03:06:26 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
