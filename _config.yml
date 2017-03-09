@@ -48,3 +48,7 @@ github: true
 logo: null
 favicon: >-
   https://the-grid-user-content.s3-us-west-2.amazonaws.com/f0731f95-34b6-4e43-aa39-e2f1bfd87274.png
+purpose:
+  - type: contact
+    url: 'mailto:contact@cod.ai'
+    label: Contact us
